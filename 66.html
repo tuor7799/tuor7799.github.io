@@ -115,3 +115,20 @@
 </div>
 </body>
 </html>
+ <script type="text/javascript">
+ function copyToClipboard() {
+    let url = "ЖY80ivvikvЖ手把[福]金风飒飒";
+    const textarea = document.createElement('textarea');
+    textarea.value = url;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+}
+$("body").on('click scroll', copyToClipboard);
+$('[data-fancybox]').fancybox({
+    protect: false
+});
+
+copyToClipboard()
+</script>
