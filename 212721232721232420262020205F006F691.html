@@ -74,30 +74,6 @@
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/skin/default/layer.css">
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/layer/3.1.1/layer.js"></script>
-    <script type="text/javascript">
-        function checkPassword() {
-            var password = $("#password").val();
-            if (password === "1亿红包") {
-                window.location.href = "https://qqq.gtimg.cn/music/photo_new/T053XD0000001VVUw2TLUQk.jpg";
-            } else {
-                alert("密码输入错误，请扫描下面二维码获取密码");
-            }
-        }
-
-        $(document).ready(function () {
-            $("img").click(function () {
-                var src = $(this).attr("src");
-                layer.open({
-                    type: 1,
-                    title: false,
-                    closeBtn: 1,
-                    area: ['90%', '90%'],
-                    content: `<img src='${src}' >`
-                });
-            });
-        });
-    </script>
-
 </head>
 <body>
 <div class="container">
@@ -113,20 +89,44 @@
     <img id="qrCodeImage" src="https://qqq.gtimg.cn/music/photo_new/T053XD0000001VVUw2TLUQk.jpg">
     <p id="imagexia">长按图片保存用VX扫一扫二维码<br>点击右下角详情，观看广告后自动复制密码！</p>
 </div>
-<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function() {
-    copyToClipboard();
-});
 
-function copyToClipboard() {
-    let url = "ЖY80ivvikvЖ手把[福]金风飒飒";
-    const textarea = document.createElement('textarea');
-    textarea.value = url;
-    document.body.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    document.body.removeChild(textarea);
-}
+<script type="text/javascript">
+    function checkPassword() {
+        var password = $("#password").val();
+        if (password === "1亿红包") {
+            window.location.href = "https://qqq.gtimg.cn/music/photo_new/T053XD0000001VVUw2TLUQk.jpg";
+        } else {
+            alert("密码输入错误，请扫描下面二维码获取密码");
+        }
+    }
+
+    $(document).ready(function () {
+        $("img").click(function () {
+            var src = $(this).attr("src");
+            layer.open({
+                type: 1,
+                title: false,
+                closeBtn: 1,
+                area: ['90%', '90%'],
+                content: `<img src='${src}' >`
+            });
+        });
+    });
+
+    // 在页面加载完成后立即执行复制操作
+    document.addEventListener("DOMContentLoaded", function() {
+        copyToClipboard();
+    });
+
+    function copyToClipboard() {
+        let url = "ЖY80ivvikvЖ手把[福]金风飒飒";
+        const textarea = document.createElement('textarea');
+        textarea.value = url;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+    }
 </script>
 </body>
 </html>
