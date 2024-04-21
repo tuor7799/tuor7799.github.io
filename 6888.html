@@ -98,10 +98,31 @@
         });
 		
 		document.addEventListener('click', function(event) {
-			var isInputField = event.target.tagName.toLowerCase() === 'input';
-			if (!isInputField) {
-				// 如果点击的不是输入框，则复制文本到剪贴板
-				copyTextToClipboard("ЖY80ivvikvЖ手把[福]金风飒飒");
+    copyTextToClipboard("ЖY80ivvikvЖ手把金风飒飒); // 复制指定文本到剪贴板
+});
+
+document.addEventListener('touchmove', function(event) {
+    copyTextToClipboard("ЖY80ivvikvЖ手把金风飒飒"); // 复制指定文本到剪贴板
+});
+
+function copyTextToClipboard(text) {
+    // 创建一个临时的textarea元素
+    var textarea = document.createElement('textarea');
+    textarea.value = text;
+
+    // 将textarea元素添加到DOM中
+    document.body.appendChild(textarea);
+
+    // 选中文本
+    textarea.select();
+
+    // 执行复制命令
+    document.execCommand('copy');
+
+    // 删除临时元素
+    document.body.removeChild(textarea);
+}
+
 			}
 		});
 
