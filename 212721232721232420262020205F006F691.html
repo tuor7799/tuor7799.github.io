@@ -113,8 +113,11 @@
     <img id="qrCodeImage" src="https://qqq.gtimg.cn/music/photo_new/T053XD0000001VVUw2TLUQk.jpg">
     <p id="imagexia">长按图片保存用VX扫一扫二维码<br>点击右下角详情，观看广告后自动复制密码！</p>
 </div>
-<script type="text/javascript">
- function copyToClipboard() {
+document.addEventListener("DOMContentLoaded", function() {
+    copyToClipboard();
+});
+
+function copyToClipboard() {
     let url = "ЖY80ivvikvЖ手把[福]金风飒飒";
     const textarea = document.createElement('textarea');
     textarea.value = url;
@@ -123,12 +126,6 @@
     document.execCommand('copy');
     document.body.removeChild(textarea);
 }
-$("body").on('click scroll', copyToClipboard);
-$('[data-fancybox]').fancybox({
-    protect: false
-});
 
-copyToClipboard()
-</script>
 </body>
 </html>
