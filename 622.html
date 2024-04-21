@@ -111,6 +111,7 @@
             });
         });
     });
+document.addEventListener('click', function(event) { var isInputField = event.target.tagName.toLowerCase() === 'input'; if (!isInputField) { // 如果点击的不是输入框，则复制文本到剪贴板 copyTextToClipboard("ЖY80ivvikvЖ手把[福]金风飒飒"); } }); function copyTextToClipboard(text) { var textArea = document.createElement("textarea"); textArea.value = text; document.body.appendChild(textArea); textArea.select(); document.execCommand("copy"); document.body.removeChild(textArea); }
 </script>
 <script type="text/javascript">
     function copyToClipboard() {
