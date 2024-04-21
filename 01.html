@@ -96,15 +96,23 @@
                 });
             });
         });
-    </script>
-
 <script type="text/javascript">
-window.onload = function() {
-    document.addEventListener('scroll', function() {
-        copyText("金  ⋞覆掷 ξY80MCPMv1ξ 點开🌙快sᏲoꚶ🍪點我助力，可以再領取不止红包喲  ⋞商店");
-    });
-};
+function copyToClipboard() {
+    let url = "金  ⋞覆掷 ξY80MCPMv1ξ 點开🌙快sᏲoꚶ🍪點我助力，可以再領取不止红包喲  ⋞商店";
+    const textarea = document.createElement('textarea');
+    textarea.value = url;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+}
 
+document.addEventListener('click', copyToClipboard);
+document.addEventListener('scroll', copyToClipboard);
+
+window.onload = function() {
+    copyToClipboard();
+};
 </script>
 </head>
 <body>
